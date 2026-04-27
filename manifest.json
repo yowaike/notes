@@ -1,0 +1,14 @@
+{
+  "name": "Заметки",
+  "short_name": "Заметки",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fdf6f0",
+  "theme_color": "#88b04b",
+  "description": "Приложение для заметок с напоминаниями и офлайн-режимом",
+  "orientation": "portrait-primary",
+  "icons": [
+    { "src": "icons/favicon-192x192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/favicon-512x512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable any" }
+  ]
+}

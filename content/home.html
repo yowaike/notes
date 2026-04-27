@@ -1,0 +1,40 @@
+<div class="home-content">
+  <h2>Добавить заметку</h2>
+  <form id="note-form" class="row">
+    <div class="input-group col-9">
+      <label for="note-input">Текст заметки</label>
+      <input type="text" id="note-input" placeholder="Введите текст заметки" required>
+    </div>
+    <button type="submit" class="col-3">Добавить</button>
+  </form>
+
+  <form id="reminder-form" class="row" style="margin-top: var(--space-lg);">
+    <div class="input-group" style="flex: 2;">
+      <label for="reminder-text">Текст напоминания</label>
+      <input type="text" id="reminder-text" placeholder="Введите текст напоминания" required>
+    </div>
+    <div class="input-group" style="flex: 1.5;">
+      <label>Дата и время</label>
+      <div class="datetime-picker-wrapper">
+        <div class="datetime-display" id="main-datetime-display" data-value="">Не выбрано</div>
+        <button type="button" class="datetime-toggle" id="main-datetime-toggle">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+        </button>
+        <div class="datetime-dropdown" id="main-datetime-dropdown" style="display:none;">
+          <div class="datetime-calendar" id="main-calendar-container"></div>
+          <button type="button" class="calendar-apply-btn">Готово</button>
+        </div>
+      </div>
+    </div>
+    <button type="submit" style="align-self: flex-end;">С напоминанием</button>
+  </form>
+
+  <h2 style="margin-top: var(--space-2xl);">Список заметок</h2>
+  <ul id="notes-list"></ul>
+  <div id="empty-state" class="empty-state" style="display:none;">Нет заметок. Создайте первую!</div>
+</div>

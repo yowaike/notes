@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#050505">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="description" content="Приложение для заметок с напоминаниями и офлайн-режимом">
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/icons/favicon-512x512.png">
+    
+    <!-- Шрифт Inter (премиальная типографика) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    <title>Заметки</title>
+</head>
+<body>
+    <!-- App Shell: Header -->
+    <header>
+        <div class="container">
+            <h1>Заметки</h1>
+            <nav class="tabs">
+                <button id="home-btn" class="active" data-page="home">Главная</button>
+                <button id="about-btn" data-page="about">О приложении</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- App Shell: Main Content Container (динамическая загрузка) -->
+    <main id="app-content" class="container">
+        <!-- Сюда подгружается content/home.html или content/about.html -->
+    </main>
+
+    <!-- App Shell: Footer с кнопками уведомлений -->
+    <footer class="container">
+        <button id="enable-push" class="push-btn">Включить уведомления</button>
+        <button id="disable-push" class="push-btn" style="display:none;">Отключить уведомления</button>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
